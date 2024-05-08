@@ -1,69 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 html{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
-    height: 200em;
+  font-family: "Ubuntu Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  height: 200vi;
 }
-html::-webkit-scrollbar{
-    display: none;
-}
-body{
-    display: flex;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
-    justify-content: center;
-    
-}
-header{
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(#000000,#00000000);
-    width: 100%;
-    margin: 0;
-    padding: 2.5em 7em 0em 7em;
-    height: 10.813em;
-    position: sticky;
+.dark-mode{
+  background-color: #000000;
+  color: #ffffff;
 }
 
+.bgr{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  background-color: #000000;
+}
+.bgr img{
+  width: 100%;
+  opacity: 70%;
+  z-index: 1;
+}
+body{
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  justify-content: center;
+  height: 200vi;
+}
+header{
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#000000d2,#00000000);
+  width: 100%;
+  margin: 0;
+  padding: 2.5vi 7vi 0vi 7vi;
+  height: 10.813vi;
+}
 .contain{
-    width: 100%;
-    position: relative;
-    justify-content: space-between;
-    display: grid;
-    column-gap: 0em;
-    column-span: 3;
-    grid-row: 1;
-    gap: 1em;
-    height: 3em;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  display: grid;
+  column-gap: 0vi;
+  column-span: 3;
+  grid-row: 1;
+  gap: 1vi;
+  height: 3vi;
+  margin: 0;
+  padding: 0;
 }
 
 .column-1{
     grid-column-start: 1;
-    width: 9em;
+    width: 9vi;
 }
 .column-2{
-    width: 14em;
-    grid-column-start: 2;
-    border: 0.2em solid blue;
+  width: 10vi;
+  grid-column-start: 2;
 }
 
 .contain-2{
-    justify-content: space-between;
-    border: solid 0.1em red;
-    display: grid;
-    column-gap: 0em;
-    column-span: 2;
-    grid-row: 1;
-    gap: 0.5em;
-    margin: 0;
-    padding: 0%;
+  justify-content: space-between;
+  display: grid;
+  column-gap: 0vi;
+  column-span: 2;
+  grid-row: 1;
+  gap: 0.5vi;
+  margin: 0;
+  padding: 0%;
 }
 
 .column-3{
@@ -77,8 +89,8 @@ header{
 .switch {
   position: relative;
   display: inline-block;
-  width: 4.3em;
-  height: 2em;
+  width: 4.3vi;
+  height: 2vi;
 }
 .switch input { 
   opacity: 0;
@@ -92,35 +104,59 @@ header{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: #E5E5E5;
   -webkit-transition: .4s;
   transition: .4s;
-  border-radius: 3em;
+  border-radius: 3vi;
 
 }
 .slider:before {
   position: absolute;
   content: "";
-  height: 1.6em;
-  width: 1.6em;
-  left: 0.3em;
-  bottom: 0.2em;
-  background-color: #000000;
+  height: 1.6vi;
+  width: 1.6vi;
+  left: 0.3vi;
+  bottom: 0.2vi;
+  background-color: #121212;
   -webkit-transition: .4s;
   transition: .4s;
-  border-radius: 3em;
+  border-radius: 3vi;
 
 }
 input:checked + .slider {
-  background-color: #000000;
+  background-color: #121212;
 }
 input:focus + .slider {
-  box-shadow: 0 0 0.1em #202020;
+  box-shadow: 0 0 0.1vi #121212;
 }
 input:checked + .slider:before {
-  -webkit-transform: translateX(2em);
-  -ms-transform: translateX(2em);
-  transform: translateX(2em);
+  -webkit-transform: translateX(2vi);
+  -ms-transform: translateX(2vi);
+  transform: translateX(2vi);
 
-  background: #ffffff;
+  background: #E5E5E5;
+}
+footer{
+  height: 3vi;
+  position: absolute;
+  background: #FAFAFA;
+  width: 100%;
+  top: 100vi;
+  z-index: 5;
+}
+.info-page{
+  display: flex;
+  height: 100vi;
+  top: 45vi;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position:relative;
+  background: linear-gradient(#00000000 0.3vi, #000000 4vi) ;
+  z-index: 10;
+  color: #FAFAFA;
+}
+.information{
+  position: absolute;
+  width: 100%;
 }
