@@ -3,7 +3,6 @@
 html{
     display: flex;
     justify-content: center;
-    
     width: 100%;
     margin: 0%;
     padding: 0%;
@@ -48,7 +47,6 @@ header{
 .column-1{
     grid-column-start: 1;
     width: 9em;
-    border: 0.2em solid green;
 }
 .column-2{
     width: 14em;
@@ -75,23 +73,18 @@ header{
     grid-column-start: 2;
 }
 
-.row{
-    grid-row-start: 1;
-}
-
+/*LIGHT AND DARK SWITCH*/
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 4.3em;
+  height: 2em;
 }
-
 .switch input { 
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -99,33 +92,35 @@ header{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ffffff;
   -webkit-transition: .4s;
   transition: .4s;
-}
+  border-radius: 3em;
 
+}
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
+  height: 1.6em;
+  width: 1.6em;
+  left: 0.3em;
+  bottom: 0.2em;
+  background-color: #000000;
   -webkit-transition: .4s;
   transition: .4s;
-}
+  border-radius: 3em;
 
+}
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #000000;
 }
-
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 0.1em #202020;
 }
-
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(2em);
+  -ms-transform: translateX(2em);
+  transform: translateX(2em);
+
+  background: #ffffff;
 }
