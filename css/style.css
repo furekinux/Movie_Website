@@ -56,8 +56,14 @@ header{
   height: 3vi;
   margin: 0;
   padding: 0;
+  animation: appear 1.5s 0s;
 }
-
+@keyframes appear {
+  0%{
+    transform: translateY(-2vi);
+    opacity: 0;
+  }
+}
 .column-1{
     grid-column-start: 1;
     width: 9vi;
@@ -125,6 +131,7 @@ header{
 }
 input:checked + .slider {
   background-color: #121212;
+  
 }
 input:focus + .slider {
   box-shadow: 0 0 0.1vi #121212;
@@ -157,6 +164,20 @@ footer{
   color: #FAFAFA;
 }
 .information{
+  z-index: 20;
+  height: 120vi;
+  top: 60.5vi;
   position: absolute;
   width: 100%;
+  background-color: #FAFAFA;
+}
+
+.today-soon{
+  font-size: 1.5vi;
+  color: #FAFAFA;
+  position: absolute;
+  top: 25vi;
+  z-index: 30;
+  border: 0.1vi solid red;
+  width: 10vi;
 }
