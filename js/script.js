@@ -4,10 +4,12 @@ light_mode.addEventListener("change",function(){
         console.log("Check")
         document.getElementById('information').style.backgroundColor = '#121212'
         document.getElementById('information').style.color = '#ffffff'
+        document.getElementById('information').style.animation = "toDark 1s"
     } else {
         console.log("No check")
         document.getElementById('information').style.backgroundColor = '#fafafa'
         document.getElementById('information').style.color = '#121212'
+        document.getElementById('information').style.animation = "toLight 1s"
     }
 })
 
@@ -35,3 +37,12 @@ function searchMovie(){
 }
 //https://www.w3schools.com/howto/howto_css_searchbar.asp
 //https://justwatch.imdbot.workers.dev/?q=Niram&L=en_IN
+
+const moviesForm = document.getElementById("searchmovies");
+moviesForm.addEventListener("submit", (event) => {
+   const searchBarValue = document.getElementById("search_box").value;
+   event.preventDefault();
+   window.location.href = `movieList.html?value=${searchBarValue}`;
+   console.log(searchBarValue)
+});
+console.log(window.location.href)
