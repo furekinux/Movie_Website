@@ -38,6 +38,7 @@ xhr.onreadystatechange = function(){
         console.log(searchArray)
         searchArray.forEach(movie => {
             console.log(movie)
+            
         });
     } else if(this.readyState === 4){
         console.log("Error :(",this.statusText)
@@ -47,10 +48,10 @@ xhr.send();
 
 const moviesForm = document.getElementById("searchmovies");
 moviesForm.addEventListener("submit", (event) => {
-   const searchBarValue = document.getElementById("search_box").value;
-   event.preventDefault();
-   window.location.href = `movieList.html?value=${searchBarValue}`;
-   console.log(searchBarValue)
+    let results = document.getElementById("src_results")
+    const searchBarValue = document.getElementById("search_box").value;
+    event.preventDefault();
+    window.location.href = `movieList.html?value=${searchBarValue}`;
+    console.log(searchBarValue)
 });
 
-let results = document.getElementById("src_results")
