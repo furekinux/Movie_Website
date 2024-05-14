@@ -306,3 +306,11 @@ input{
   border: transparent;
   font-size: 1vi;
 }
+.src{
+  height: 40vi;
+  width: 60vi;
+  display: flex;
+  overflow: scroll;
+  justify-content:space-around;
+
+}
