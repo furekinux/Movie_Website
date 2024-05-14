@@ -22,36 +22,48 @@ let ArrayS = search.split("")
 let finding = ArrayS.indexOf("=");
 console.log(ArrayS)
 
-console.log(finding)
+search = search.slice(finding+1,taman).replaceAll("%20"," ")
 
-search = search.slice(finding+1,taman)
 console.log(search)
+let url =`https://search.imdbot.workers.dev/?q=${search}`
 
-let url_streaming =`https://search.imdbot.workers.dev/?q=${search}`
 let xhr = new XMLHttpRequest()
-xhr.open("GET",url_streaming,true);
+xhr.open("GET",url,true);
 xhr.onreadystatechange = function(){
-    if (this.readyState === 4 && this.status === 200){
-        let streaming = JSON.parse(this.responseText)
-        console.log(streaming)
-        searchArray=streaming.description
-        console.log(searchArray)
-        searchArray.forEach(movie => {
-            console.log(movie)
-            
+if (this.readyState === 4 && this.status === 200){
+    let src_res = JSON.parse(this.responseText)
+    searchArray=src_res.description
+    console.log("sear arr",searchArray)
+    searchArray.forEach(movie => {
+        console.log(movie)
+        if(movie["#IMG_POSTER"]!=undefined){
+            let results = document.getElementById("src_results")
+            let newdiv = document.createElement("div")
+            newdiv.setAttribute("style","margin: 1vi;text-align: start,display: flex,width:23vi")
+            newdiv.innerHTML =`
+                <img style="width: 10vi" src="${movie["#IMG_POSTER"]}"/>
+                <p style="font-size= 1em">${movie["#TITLE"]}</p>`
+            results.appendChild(newdiv)
+        }else{
+            let results = document.getElementById("src_results")
+            let newdiv = document.createElement("div").innerHTML = `
+            <p>${movie["#TITLE"]}</p>`
+            results.appendChild(newdiv)
+        }
+        
+
         });
-    } else if(this.readyState === 4){
-        console.log("Error :(",this.statusText)
-    }
+} else if(this.readyState === 4){
+    console.log("Error :(",this.statusText)
+}
 }
 xhr.send();
 
 const moviesForm = document.getElementById("searchmovies");
 moviesForm.addEventListener("submit", (event) => {
-    let results = document.getElementById("src_results")
-    const searchBarValue = document.getElementById("search_box").value;
-    event.preventDefault();
-    window.location.href = `movieList.html?value=${searchBarValue}`;
-    console.log(searchBarValue)
+   const searchBarValue = document.getElementById("search_box").value;
+   event.preventDefault();
+   window.location.href = `movieList.html?value=${searchBarValue}`;
+   console.log(searchBarValue)
 });
-
+console.log(window.location.href)
