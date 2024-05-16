@@ -2,7 +2,10 @@ let light_mode = document.getElementById("switch")
 light_mode.addEventListener("change",function(){
     if(this.checked){
         console.log("Check")
-        let items = document.querySelectorAll("movies")
+        let arrow1 = document.getElementById("arr_cur").src ="./storage/icons/arrow_r_w.svg";
+        let arrow2 = document.getElementById("arr_com").src ="./storage/icons/arrow_r_w.svg";
+
+        let items = document.querySelectorAll("movies");
         items.forEach(element => {
             element.style.backgroundColor = '#121212'
             element.style.color = '#ffffff'
@@ -10,6 +13,8 @@ light_mode.addEventListener("change",function(){
         });
     } else {
         console.log("No check")
+        let arrow1 = document.getElementById("arr_cur").src ="./storage/icons/arrow_r_b.svg";
+        let arrow2 = document.getElementById("arr_com").src ="./storage/icons/arrow_r_b.svg";
         let items = document.querySelectorAll("movies")
         items.forEach(element => {
             element.style.backgroundColor = '#fafafa'
