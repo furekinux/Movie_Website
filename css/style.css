@@ -186,11 +186,11 @@ footer{
 }
 .information{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   z-index: 20;
-  height: 120vi;
-  top: 53vi;
-  position: absolute;
+  height: 45vi;
+  top: -50vi;
+  position: relative;
   width: 100%;
   background-color: #FAFAFA;
 }
@@ -282,13 +282,18 @@ footer{
   }
 }
 
-.currently-playing{
-  top: 3vi;
+.movie-show{
+  top: 4vi;
   position: relative;
-  width: 90%;
-  border: 0.1vi solid #ff0000;
+  width: 85%;
 }
-
+h3 span{
+  font-size: 1.2vi;
+  position: relative;
+}
+.movie-show h3{
+  font-size: 2vi;
+}
 .search{
   width: 2.3vi;
   cursor: pointer;
@@ -312,5 +317,55 @@ input{
   display: flex;
   overflow: scroll;
   justify-content:space-around;
+}
+.cp-m{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cp-m div{
+  width: 19vi;
+  height: 27vi;
+  border-radius: 0.7vi;
+}
+.lionK{
+  background: linear-gradient(#ff000000, #00000075),  url("../storage/img/lionK.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.viking{
+  background: url("../storage/img/vikings.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.what{
+  background: url("../storage/img/weirdname.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.greys{
+  background: url("../storage/img/greys.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.mortal{
+  background: url("../storage/img/mortal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bliss{
+  background: url("../storage/img/bliss.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rain{
+  background: url("../storage/img/rain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slavery{
+  background: url("../storage/img/slavery.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
