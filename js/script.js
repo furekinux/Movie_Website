@@ -2,19 +2,23 @@ let light_mode = document.getElementById("switch")
 light_mode.addEventListener("change",function(){
     if(this.checked){
         console.log("Check")
-        document.getElementById('information').style.backgroundColor = '#121212'
-        document.getElementById('information').style.color = '#ffffff'
-        document.getElementById('information').style.animation = "toDark 1s"
+        let items = document.querySelectorAll("movies")
+        items.forEach(element => {
+            element.style.backgroundColor = '#121212'
+            element.style.color = '#ffffff'
+            element.style.animation = "toDark 1s"
+        });
     } else {
         console.log("No check")
-        document.getElementById('information').style.backgroundColor = '#fafafa'
-        document.getElementById('information').style.color = '#121212'
-        document.getElementById('information').style.animation = "toLight 1s"
+        let items = document.querySelectorAll("movies")
+        items.forEach(element => {
+            element.style.backgroundColor = '#fafafa'
+            element.style.color = '#121212'
+            element.style.animation = "toLight 1s"
+        });
     }
 })
-
 searchArray=[]
-
 function searchMovie(){
     let search = document.getElementById("search_box").value
     let url_streaming =`https://search.imdbot.workers.dev/?q=${search}`
@@ -35,9 +39,6 @@ function searchMovie(){
     }
     xhr.send();
 }
-//https://www.w3schools.com/howto/howto_css_searchbar.asp
-//https://justwatch.imdbot.workers.dev/?q=Niram&L=en_IN
-
 const moviesForm = document.getElementById("searchmovies");
 moviesForm.addEventListener("submit", (event) => {
    const searchBarValue = document.getElementById("search_box").value;
