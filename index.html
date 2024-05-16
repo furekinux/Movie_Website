@@ -43,7 +43,7 @@
     </header>
     <div style="width: 100%; position: absolute;">
         <div class="bgr" id="bgr-img">
-            <img src="https://nizami-movie-center.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Feglumoo6%2Fproduction%2Fb7835b79f2ede9c604200b2b1801eaf2cc6dd21c-1512x773.png%3Fauto%3Dformat&w=1920&q=75" alt="" srcset="">
+            <img id="bgr_is_movie" src="https://nizami-movie-center.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Feglumoo6%2Fproduction%2Fb7835b79f2ede9c604200b2b1801eaf2cc6dd21c-1512x773.png%3Fauto%3Dformat&w=1920&q=75" alt="" srcset="">
         </div>
         <div class="today-soon">
             <div class="today">
@@ -60,12 +60,69 @@
 
             </div>
         </div>
-        <div class="information" id="information">
-            <div class="currently-playing" id="currently">
-                Currently playing
+        <movies class="information" id="information">
+            <div class="movie-show" id="currently">
+                <h3>Currently playing <span>see more <img style="width: 2vi;margin-bottom: -0.7vi;" src="./storage/icons/arrow_r_b.svg"></span></h3>
+                <section class="cp-m">
+                    <div class="lionK">
+
+                    </div>
+                    <div class="viking">
+
+                    </div>
+                    <div class="what">
+
+                    </div>
+                    <div class="greys">
+
+                    </div>
+                </section>
             </div>
-        </div>
-        
+            
+        </movies>
+        <movies class="information" id="information">
+            <div class="movie-show" id="currently">
+                <h3>Coming soon <span>see more <img style="width: 2vi;margin-bottom: -0.7vi;" src="./storage/icons/arrow_r_b.svg"></span></h3>
+                <section class="cp-m">
+                    <div class="mortal">
+
+                    </div>
+                    <div class="bliss">
+
+                    </div>
+                    <div class="rain">
+
+                    </div>
+                    <div class="slavery">
+
+                    </div>
+                </section>
+            </div>
+        </movies>
+        <movies class="information" id="information">
+            <div class="movie-show" id="">
+                <h3>Pearls of Azerbaijani cinema</h3>
+                <section class="cp-m">
+                    
+                </section>
+            </div>
+        </movies>
+        <movies class="information" id="information">
+            <div class="movie-show" id="">
+                <h3>About us</h3>
+                <section class="cp-m">
+                    
+                </section>
+            </div>
+        </movies>
+        <movies class="movie-show" id="information">
+            <div class="movie-show" id="">
+                <h3>Lastest news</h3>
+                <section class="cp-m">
+                    
+                </section>
+            </div>
+        </movies>
         <footer>
         
         </footer>
