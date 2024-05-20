@@ -1,0 +1,78 @@
+.cp-m{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cp-m div{
+  width: 18vi;
+  padding: 1vi;
+  height: 28vi;
+  border-radius: 0.7vi;
+  line-height: 0;
+}
+.cp-m span{
+  font-size: 1.2vi;
+  background-color: #ffffff3b;
+  padding: 0.2vi 0.6vi;
+  margin-left: 0vi;
+  margin-right: 0.6vi;
+  border-radius: 0.5vi;
+}
+.cp-m p{
+  font-size: 1.5vi;
+  margin-left:1vi;
+}
+.cp-m h4{
+  margin-top: 19.5vi;
+  font-size: 1.45vi;
+  margin-left: 1vi;
+}
+
+.lionK{
+  background: linear-gradient(#ff000000, #00000075),  url("../storage/img/lionK.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
+.viking{
+  background: url("../storage/img/vikings.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
+.what{
+  background: url("../storage/img/weirdname.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
+.greys{
+  background: url("../storage/img/greys.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
+.mortal{
+  background: url("../storage/img/mortal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
+.bliss{
+  background: url("../storage/img/bliss.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
+.rain{
+  background: url("../storage/img/rain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
+.slavery{
+  background: url("../storage/img/slavery.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white
+}
