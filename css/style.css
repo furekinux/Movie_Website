@@ -49,7 +49,6 @@ body{
   margin: 0%;
   padding: 0%;
   justify-content: center;
-  height: 200vi;
 }
 header{
   z-index: 30;
@@ -312,11 +311,11 @@ input{
   font-size: 1vi;
 }
 .src{
+  top: 8vi;
   position: absolute;
-  border: solid red;
-  height: 40vi;
-  width: 60vi;
-  display: flex;
-  overflow: scroll;
-  justify-content:space-around;
+  height: 50vi;
+  width: 80vi;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
 }
