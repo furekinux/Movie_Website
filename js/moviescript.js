@@ -3,12 +3,21 @@ light_mode.addEventListener("change",function(){
     if(this.checked){
         console.log("Check")
         document.getElementById('information').style.backgroundColor = '#121212'
+        document.querySelector('body').style.backgroundColor = '#121212'
+        document.querySelector('body').style.animation = "toDark 1s"
+        document.querySelector('html').style.backgroundColor = '#121212'
+        document.querySelector('html').style.animation = "toDark 1s"
         document.getElementById('information').style.color = '#ffffff'
         document.getElementById('information').style.animation = "toDark 1s"
     } else {
         console.log("No check")
         document.getElementById('information').style.backgroundColor = '#fafafa'
         document.getElementById('information').style.color = '#121212'
+        document.querySelector('body').style.animation = "toLight 1s"
+        document.querySelector('html').style.backgroundColor = '#fafafa'
+        document.querySelector('html').style.animation = "toLight 1s"
+        document.querySelector('body').style.backgroundColor = '#fafafa'
+
         document.getElementById('information').style.animation = "toLight 1s"
     }
 })
@@ -39,10 +48,10 @@ if (this.readyState === 4 && this.status === 200){
         if(movie["#IMG_POSTER"]!=undefined){
             let results = document.getElementById("src_results")
             let newdiv = document.createElement("div")
-            newdiv.setAttribute("style","margin: 1vi;text-align: start,display: flex,width:23vi")
+            newdiv.setAttribute("style","text-align: start,display: flex,width:13vi;")
             newdiv.innerHTML =`
-                <img style="width: 10vi" src="${movie["#IMG_POSTER"]}"/>
-                <p style="font-size= 1em">${movie["#TITLE"]}</p>`
+                <img style="width: 13vi" src="${movie["#IMG_POSTER"]}"/>
+                <p style="width: 13vi;font-size= 1em">${movie["#TITLE"]}</p>`
             results.appendChild(newdiv)
         }else{
             let results = document.getElementById("src_results")
