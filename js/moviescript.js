@@ -48,10 +48,14 @@ if (this.readyState === 4 && this.status === 200){
         if(movie["#IMG_POSTER"]!=undefined){
             let results = document.getElementById("src_results")
             let newdiv = document.createElement("div")
-            newdiv.setAttribute("style","text-align: start,display: flex,width:13vi;")
+            newdiv.setAttribute("style",
+            `text-align: start,
+            display: flex,
+            width: 13vw;
+            height: 20.5vi; background: linear-gradient(#ff000000, #00000075), url('${movie["#IMG_POSTER"]}');background-size: cover;`)
+            
             newdiv.innerHTML =`
-                <img style="width: 13vi" src="${movie["#IMG_POSTER"]}"/>
-                <p style="width: 13vi;font-size= 1em">${movie["#TITLE"]}</p>`
+                <p style="width: 13vw;font-size= 1vi; color:#ffffff; position: relative; margin: 0vi 1vi; top: 7vi"><b>${movie["#TITLE"]}</b></p>`
             results.appendChild(newdiv)
         }else{
             let results = document.getElementById("src_results")
